@@ -1,0 +1,25 @@
+
+<template>
+  <h1>{{ message }}</h1>
+</template>
+
+<script lang="lua">
+
+a = ref(30)
+b = ref(50)
+
+function test_fun()
+    return a.value + b.value + 1
+end
+
+function test_fun_cb(oldval,newval,userdata)
+    print("test_fun_cb is called with userdata:", userdata)
+    print("oldval:", oldval)
+    print("newval:", newval)
+end
+
+Observer1 = Observer.create(test_fun,test_fun_cb,"testarg")
+a.value = 40
+
+</script>
+

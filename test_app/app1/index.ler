@@ -1,0 +1,15 @@
+<template>
+    <view>
+        <text x="50" y="50">Hello LER DOM!</text>
+        <button x="50" y="100" @click="click_me()">
+            <text>Click Me</text>
+        </button>
+        <bar value="70" x="50" y="150" width="200" height="20" />
+    </view>
+</template>
+
+<script>
+function click_me()
+    print("Click Me button clicked!")
+end
+</script>

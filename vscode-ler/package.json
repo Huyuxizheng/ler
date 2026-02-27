@@ -1,0 +1,38 @@
+{
+  "name": "ler-language",
+  "displayName": "LER Language Support",
+  "description": "Language support for .ler files (XML template + Lua script)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ler",
+        "aliases": [
+          "LER",
+          "ler"
+        ],
+        "extensions": [
+          ".ler"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ler",
+        "scopeName": "source.ler",
+        "path": "./syntaxes/ler.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.xml": "xml",
+          "source.lua": "lua"
+        }
+      }
+    ]
+  }
+}
